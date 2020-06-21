@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.page {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    height: 100vh;
+    min-height: 100%;
+}
+
+.temperature-wrapper {
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 2px;
+}
+
+.temperature-wrapper > div {
+    width: 250px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.temperature-wrapper > div label {
+    order: 1;
+    color: #333;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.temperature-wrapper > div input {width: 100%;border: 1px solid #ccc;border-radius: 2px;padding: 10px 5px;color: #333;font-size: 15px;outline: none;}
+
+.celsius-wrapper {
+    margin-right: 10px;
+}
+
+.fahrenheit-wrapper {
+    margin-left: 10px;
+}

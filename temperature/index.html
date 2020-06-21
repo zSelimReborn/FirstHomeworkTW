@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Convertitore</title>
+</head>
+<body>
+    <main class="page">
+        <div class="temperature-wrapper">
+            <div class="celsius-wrapper">
+                <label for="celsius">Celsius</label>
+                <input type="text" name="celsius" id="celsius"
+                    data-value="0"
+                    data-target="fahrenheit" placeholder="Temperatura in celsius">
+            </div>
+
+            <div class="fahrenheit-wrapper">
+                <label for="fahrenheit">Fahrenheit</label>
+                <input type="text" name="fahrenheit" id="fahrenheit"
+                    data-value="0"
+                    data-target="celsius" placeholder="Temperatura in fahrenheit">
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/converter.js"></script>
+    <script>
+        let converter = window.Converter;
+
+        converter.init();
+    </script>
+</body>
+</html>

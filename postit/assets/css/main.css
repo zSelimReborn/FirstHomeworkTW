@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.page {
+    height: 100%;
+    width: 100%;
+    background: #318963;
+}
+
+
+.posts-writer {
+    position: fixed;
+    bottom: 0;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #318963;
+    z-index: 50;
+}
+
+.posts-writer .input-wrapper {
+    width: 520px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    align-items: center;
+    background: #287E59;
+}
+
+.posts-writer .input-wrapper input {
+    border: 0;
+    padding: 10px 15px;
+    flex: 1;
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+
+.posts-writer .input-wrapper input::placeholder {
+    color: #fff;
+}
+
+.posts-writer .input-wrapper input::-moz-placeholder {
+    color: #fff;
+}
+
+.posts-writer .input-wrapper input::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.posts-writer .input-wrapper .button-wrapper .button {
+    background: transparent;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    font-size: 20px;
+    color: #fff;
+}
+
+.posts-list {
+    width: 100%;
+    position: relative;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.posts-list .post-it {
+    width: calc((100% / 5) - 10px);
+    min-height: 200px;
+    background: #eee;
+    border-radius: 5px;
+    padding: 15px;
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.posts-list .post-it .remove-post-it {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    border: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 15px;
+    color: red;
+    outline: none;
+}
+
+textarea.edit-post-it {
+    border: 0;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    outline: none;
+    font-size: 15px;
+    background: #eee;
+}

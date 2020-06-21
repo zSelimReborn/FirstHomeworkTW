@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.page {
+    height: 100%;
+}
+
+#calculator {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    grid-template-areas:
+        "top top top"
+        "left content right"
+        "bottom bottom bottom";
+    grid-template-columns: 1fr 320px 1fr;
+    grid-template-rows: 1fr 412px 1fr;
+}
+
+.top {
+    grid-area: top;
+}
+
+.left { 
+    grid-area: left; 
+}
+
+.right { 
+    grid-area: right;
+ }
+
+.bottom {
+    grid-area: bottom;
+    height: 100%;
+}
+
+.filler {
+    position: relative;
+    z-index: 50;
+    background: #fff;
+}
+
+.calculator {
+    display: block;
+    width: 320px;
+    height: 412px;
+    border: 1px solid #333;
+    border-radius: 2px;
+    background: #fafafa;
+    grid-area: content;
+}
+
+.calculator .input-container {
+    position: relative;
+    z-index: 9;
+}
+
+.calculator .input-container .calculator-field {
+    width: 100%;
+    border: 0;
+    cursor: default;
+    height: 50px;
+    text-align: right;
+    outline: none;
+    padding: 5px;
+    font-size: 32px;
+    color: #000;
+    background: #eee;
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: 1px solid transparent;
+}
+
+.calculator .input-container .calculator-field:focus {
+    border-bottom: 1px solid #000;
+}
+
+.calculator .buttons-container {
+    padding: 10px 5px 5px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: fit-content;
+}
+
+.calculator .buttons-container > .button {
+    width: calc(25% - 2px);
+    padding: 19px;
+    margin: 1px;
+    outline: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.calculator .input-container {
+    padding-top: 60px;
+    background: #eee;
+}
+
+.calculator .buttons-container > .button.wide {
+    flex: 1;
+}
+
+.calculator .buttons-container > .button {
+    max-height: 55px;
+}
+
+.calculator .buttons-container > .button.wide {
+    max-height: none;
+}
+
+.calculator .buttons-container > .button {
+    font-family: 'Roboto',sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.calculator .buttons-container > .button {
+    transition: 0.4s all;
+    position: relative;
+    z-index: 9;
+}
+
+.calculator .buttons-container {
+    background: #eee;
+}
+
+.calculator .buttons-container > .button:hover {
+    border-color: #d9d9d9;
+}
+
+.calculator .buttons-container > .button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    transition: 0.4s;
+    z-index: -1;
+}
+
+.calculator .buttons-container > .button:hover::after {
+    background-color: #e3e3e3;
+}
+
+#acrylic-container {
+    position: fixed;
+    width: 15rem;
+    height: 15rem;
+    z-index: 4;
+    border-radius: 50%;
+    transform: translate3d(-50%, -50%, 0);  
+    background: radial-gradient(ellipse at center, rgba(36, 35, 35, 0.5) 0%, rgba(238, 238, 238, 0) 50%);
+}
+
+body {
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.calculator .buttons-container > .button:active,
+.calculator .buttons-container > .button.active {
+    transform: translateY(2px);
+    border-color: #d9d9d9;
+}
+
+.calculator .buttons-container > .button:active::after,
+.calculator .buttons-container > .button.active::after {
+
+    background-color: #cccccc;
+}
